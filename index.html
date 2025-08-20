@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free Fire Diamond Top-Up</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Hero -->
+  <section class="hero">
+    <img src="banner.jpg" alt="Free Fire Banner" class="hero-img" />
+    <div class="hero-text">
+      <h1>⚡ Instant Free Fire Top-Up</h1>
+      <p>Fast • Secure • Trusted</p>
+      <a href="#order" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <!-- Packs -->
+  <section class="packs">
+    <h2>Select Your Diamond Pack</h2>
+    <div class="pack-grid">
+      <button class="pack-card" data-pack="100">
+        <h3>100 Diamonds</h3>
+        <p>৳ 90</p>
+      </button>
+      <button class="pack-card" data-pack="310">
+        <h3>310 Diamonds</h3>
+        <p>৳ 270</p>
+      </button>
+      <button class="pack-card" data-pack="520">
+        <h3>520 Diamonds</h3>
+        <p>৳ 430</p>
+      </button>
+      <button class="pack-card" data-pack="1060">
+        <h3>1060 Diamonds</h3>
+        <p>৳ 850</p>
+      </button>
+    </div>
+  </section>
+
+  <!-- Order Form -->
+  <section id="order" class="order-section">
+    <h2>Complete Your Order</h2>
+    <form id="orderForm">
+      <label for="playerId">Free Fire Player ID</label>
+      <input type="text" id="playerId" placeholder="Enter your Player ID" required />
+
+      <label for="selectedPack">Selected Diamond Pack</label>
+      <input type="text" id="selectedPack" placeholder="Tap a pack above" readonly required />
+
+      <label for="paymentMethod">Payment Method</label>
+      <select id="paymentMethod" required>
+        <option value="">-- Select Payment Method --</option>
+        <option value="instant">Instant Pay</option>
+        <option value="wallet">Wallet Pay</option>
+        <option value="bkash">bKash</option>
+        <option value="nagad">Nagad</option>
+        <option value="rocket">Rocket</option>
+      </select>
+
+      <label for="paymentScreenshot">Upload Payment Screenshot</label>
+      <input type="file" id="paymentScreenshot" accept="image/*" required />
+
+      <button type="submit" class="btn">Submit Order</button>
+    </form>
+
+    <div id="status"></div>
+  </section>
+
+  <!-- Firebase Compat (no modules needed) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-storage-compat.js"></script>
+
+  <!-- Your app logic -->
+  <script defer src="app.js"></script>
+</body>
+  </html>
